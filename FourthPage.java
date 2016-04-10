@@ -14,6 +14,7 @@ public class FourthPage extends FragmentActivity {
     Bundle extras = getIntent().getExtras();
     String latitude = extras.getString("latitude");
     String longitude = extras.getString("longitude");
+    String name = extras.getString("name");
     double lat = Double.parseDouble(latitude);
     double lng = Double.parseDouble(longitude);
 
@@ -65,6 +66,6 @@ public class FourthPage extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(lat,lng)).title(name));
     }
 }

@@ -26,6 +26,7 @@ public class ThirdPage extends Activity {
     private TextView textView3;
     String latitude;
     String longitude;
+    String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -285,6 +286,7 @@ public class ThirdPage extends Activity {
         Bundle extras = new Bundle();
         intent.putExtra("latitude",latitude);
         intent.putExtra("longitude", longitude);
+        intent.putExtra("name", name);
         startActivity(intent);
 
     }

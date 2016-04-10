@@ -24,6 +24,8 @@ import java.net.URL;
 
 public class ThirdPage extends Activity {
     private TextView textView3;
+    String latitude;
+    String longitude;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -279,6 +281,11 @@ public class ThirdPage extends Activity {
         }
     }
     public void displayMap(View view){
+        Intent intent = new Intent(ThirdPage.this,FourthPage.class);
+        Bundle extras = new Bundle();
+        intent.putExtra("latitude",latitude);
+        intent.putExtra("longitude", longitude);
+        startActivity(intent);
 
     }
 
